@@ -26,5 +26,5 @@ powershell.exe -NoLogo -ExecutionPolicy Bypass -Command ".\set-all-windows-of-a-
 
 To view the full documentation of the script, open *powershell.exe* and run:
 ```
-Get-Help .\run-process-on-top.ps1 -Full
+Get-Help .\set-all-windows-of-a-process-on-top.ps1 -Full
 ```
