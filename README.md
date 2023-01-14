@@ -1,30 +1,6 @@
 # process-on-top
 
-A PowerShell script that runs / sets a process window(s) on top.
+PowerShell scripts for setting a process "on top".
 
-## Usage
-
-### Clone The Project
-
-```
-git clone https://github.com/taljacob2/process-on-top
-```
-
-### Run
-
-Open *powershell.exe* and run:
-```
-.\run-process-on-top.ps1 -ProcessPath <ProcessPath>
-```
-
-In case you encouter an error, try running with:
-```
-powershell.exe -NoLogo -ExecutionPolicy Bypass -Command ".\run-process-on-top.ps1 -ProcessPath <ProcessPath>"
-```
-
-## Help
-
-To view the full documentation of the script, open *powershell.exe* and run:
-```
-Get-Help .\run-process-on-top.ps1 -Full
-```
+- See [run-process-on-top](run-process-on-top/README.md) script.
+- See [set-all-windows-of-a-process-on-top](set-all-windows-of-a-process-on-top/README.md) script.
