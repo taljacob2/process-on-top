@@ -7,11 +7,12 @@ $User32 = Add-Type -Debug:$False -MemberDefinition '
                                            uint uFlags);
 ' -Name "User32Functions" -namespace User32Functions -PassThru
 
-$Handle = (Get-Process -Name "$ProcessNameToSetOnTop").MainWindowHandle
-[Void]$User32::SetWindowPos($Handle, -1, 0, 0, 0, 0, 0x53)
+$ProcessHandleArray = (Get-Process -Name "$ProcessNameToSetOnTop").MainWindowHandle
 
-[Void]$User32::SetWindowPos($Handle[0], -1, 0, 0, 0, 0, 0x53)
-
+foreach ($processHandle in $ProcessHandleArray)
+{
+  [Void]$User32::SetWindowPos($processHandle, -1, 0, 0, 0, 0, 0x53)
+}
 
 # Bibliography:
 # See https://stackoverflow.com/a/73319269/14427765
